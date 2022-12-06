@@ -12,8 +12,23 @@ namespace ML
         public string Nombre { get; set; }
         public string ApellidoPaterno { get; set; }
         public string ApellidoMaterno { get; set; }
-        public DateTime FechaNacimineto { get; set; }
-        public char Genero { get; set; }
+        public string FechaNacimiento { get; set; }
+        public string Genero { get; set; }
+
+        public string UserName { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
+        public string Telefono { get; set; }
+        public string Celular { get; set; }
+        public string CURP { get; set; }
+
+        public string Imagen { get; set; }
+        public bool Status { get; set; }
+
+        public ML.Rol Rol { get; set; } //propiedad de navegacion 
+        public ML.Direccion Direccion{ get; set; } //propiedad de navegacion 
+
+        public List<object> Usuarios { get; set; }
 
     }
 }

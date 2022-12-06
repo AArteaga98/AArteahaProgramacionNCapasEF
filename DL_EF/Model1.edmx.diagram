@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1a8b2d2090644697851a238bb6c791c6" Name="Diagram1">
+        <EntityTypeShape EntityType="AArteagaProgramacionNCapasModel.Empresa" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AArteagaProgramacionNCapasModel.Rol" Width="1.5" PointX="0.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AArteagaProgramacionNCapasModel.Colonia" Width="1.5" PointX="7.5" PointY="6.25" />
+        <EntityTypeShape EntityType="AArteagaProgramacionNCapasModel.Direccion" Width="1.5" PointX="9.75" PointY="3.375" />
+        <EntityTypeShape EntityType="AArteagaProgramacionNCapasModel.Estado" Width="1.5" PointX="3" PointY="6.25" />
+        <EntityTypeShape EntityType="AArteagaProgramacionNCapasModel.Municipio" Width="1.5" PointX="5.25" PointY="6.25" />
+        <EntityTypeShape EntityType="AArteagaProgramacionNCapasModel.Pai" Width="1.5" PointX="0.75" PointY="6.375" />
+        <AssociationConnector Association="AArteagaProgramacionNCapasModel.FK__Colonia__IdMunic__30F848ED" />
+        <AssociationConnector Association="AArteagaProgramacionNCapasModel.FK__Direccion__IdCol__33D4B598" />
+        <AssociationConnector Association="AArteagaProgramacionNCapasModel.FK__Estado__IdPais__2B3F6F97" />
+        <AssociationConnector Association="AArteagaProgramacionNCapasModel.FK__Municipio__IdEst__2E1BDC42" />
+        <EntityTypeShape EntityType="AArteagaProgramacionNCapasModel.Aseguradora" Width="1.5" PointX="5.25" PointY="9" />
+        <EntityTypeShape EntityType="AArteagaProgramacionNCapasModel.Empleado" Width="1.5" PointX="8" PointY="9.375" />
+        <AssociationConnector Association="AArteagaProgramacionNCapasModel.FK__Empleado__IdEmpr__619B8048" />
+        <EntityTypeShape EntityType="AArteagaProgramacionNCapasModel.Usuario" Width="1.5" PointX="3" PointY="9.125" />
+        <AssociationConnector Association="AArteagaProgramacionNCapasModel.FK__Asegurado__IdUsu__32E0915F" />
+        <AssociationConnector Association="AArteagaProgramacionNCapasModel.FK__Direccion__IdUsu__35BCFE0A" />
+        <AssociationConnector Association="AArteagaProgramacionNCapasModel.FK_UsuarioRol" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

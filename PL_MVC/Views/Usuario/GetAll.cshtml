@@ -1,0 +1,108 @@
+﻿@model ML.Usuario
+@{
+    ViewBag.Title = "GetAll";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <h2>Usuario</h2>
+    @*<p>Aqui puedes ver, editar o agregar un Usuario</p>
+        <p>Para agregar un usuario presiona el boton verde</p>
+        <p>Para editar presione el amarillo</p>
+        <p>Para eliminar presiona el rojo</p>*@
+    <div class="row">
+        <div style="float:left">
+            @Html.ActionLink("+", "Form", "Usuario", htmlAttributes: new { @class = "btn btn-success" })
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <table class="table table-responsive">
+            <thead>
+                <tr>
+
+                    <th> <center>Editar </center></th>
+                    <th> <center>IdUsuario </center></th>
+                    <th> <center>Nombre </center></th>
+                    <th> <center>Fecha Nacimineto </center></th>
+                    <th> <center>Genero </center></th>
+                    <th> <center>UserName </center></th>
+                    <th> <center>Email </center></th>
+                    <th class="hidden"> <center>Password </center></th>
+                    <th> <center>Telefono </center></th>
+                    <th> <center>Celular </center></th>
+                    <th> <center>CURP </center></th>
+                    <th> <center>Rol </center></th>
+                    <th> <center>Imagen </center></th>
+                    <th> <center>Direccion Calle</center></th>
+                    <th> <center>Numero Interior</center></th>
+                    <th> <center>Numero Exterior</center></th>
+                    <th> <center>Colonia</center></th>
+                    <th> <center>CP</center></th>
+                    <th> <center>Municipio</center></th>
+                    <th> <center>Estado</center></th>
+                    <th> <center>Pais</center></th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (ML.Usuario usuario in Model.Usuarios)
+                {
+                    <tr>
+
+                        <td class="text-center"><a class="btn btn-warning glyphicon glyphicon-edit" href="@Url.Action("Form", "Usuario", new {IdUsuario= usuario.IdUsuario})"></a> </td>
+                        <td> <center>@usuario.IdUsuario </center></td>
+                        <td> <center>@usuario.Nombre @usuario.ApellidoPaterno @usuario.ApellidoMaterno  </center></td>
+                        <td> <center>@usuario.FechaNacimiento </center></td>
+                        <td> <center>@usuario.Genero </center></td>
+                        <td> <center>@usuario.UserName </center></td>
+                        <td> <center>@usuario.Email </center></td>
+                        <td class="hidden"> <center>@usuario.Password </center></td>
+                        <td> <center>@usuario.Telefono </center></td>
+                        <td> <center>@usuario.Celular </center></td>
+                        <td> <center>@usuario.CURP </center></td>
+                        <td class="hidden">@usuario.Rol.IdRol</td>
+                        <td><center>@usuario.Rol.Nombre</center></td>
+
+
+                        @*<td>
+                                @if (usuario.Imagen == null)
+                                {
+                                    <img id="ImagenPreview" src="data:image/jpeg;base64,@Convert.ToBase64String(usuario.Imagen)" width="50" height="50" />
+
+                                }
+                                else
+                                {
+                                    <img id="ImagenPreview" src="~/Imagen/userdef.jpg" style=" height:50px; width:50px;" />
+                                }
+                            </td>*@
+
+                        <td class="hidden">@usuario.Direccion.IdDireccion</td>
+                        <td><center>@usuario.Direccion.Calle</center></td>
+
+                        <td><center>@usuario.Direccion.NumeroInterior</center></td>
+                        <td><center>@usuario.Direccion.NumeroExterior</center></td>
+
+                        <td class="hidden">@usuario.Direccion.Colonia.IdColonia</td>
+                        <td><center>@usuario.Direccion.Colonia.Nombre</center></td>
+
+                        <td><center>@usuario.Direccion.Colonia.CP</center></td>
+
+                        <td class="hidden">@usuario.Direccion.Colonia.Municipio.IdMunicipio</td>
+                        <td><center>@usuario.Direccion.Colonia.Municipio.Nombre</center></td>
+
+                        <td class="hidden">@usuario.Direccion.Colonia.Municipio.Estado.IdEstado</td>
+                        <td><center>@usuario.Direccion.Colonia.Municipio.Estado.Nombre</center></td>
+
+                        <td class="hidden">@usuario.Direccion.Colonia.Municipio.Estado.Pais.IdPais</td>
+                        <td><center>@usuario.Direccion.Colonia.Municipio.Estado.Pais.Nombre</center></td>
+
+                        <td class="text-center"><a class="btn btn-danger glyphicon glyphicon-trash" href="@Url.Action("Delete", "Usuario", new {IdUsuario= usuario.IdUsuario})" onclick="return confirm('Estas seguro que deseas eliminar? ');"></a> </td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
