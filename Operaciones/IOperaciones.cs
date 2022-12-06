@@ -25,6 +25,5 @@ namespace Operaciones
 
         [OperationContract]
         string Saludo(string nombre);
-
     }
 }
