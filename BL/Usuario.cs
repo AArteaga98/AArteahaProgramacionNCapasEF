@@ -595,7 +595,7 @@ namespace BL
                             usuario.Rol = new ML.Rol();
                             usuario.Rol.IdRol = (byte)row.IdRol;
                             usuario.Rol.Nombre = row.RolNombre;
-                            usuario.Imagen = row.Imagen;
+                            //usuario.Imagen = row.Imagen;
                             usuario.Status = (bool)row.Status;
 
                             usuario.Direccion = new ML.Direccion();

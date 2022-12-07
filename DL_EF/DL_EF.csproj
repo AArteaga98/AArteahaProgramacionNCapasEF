@@ -56,6 +56,9 @@
     <Compile Include="AseguradoraGetAll_Result.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="AseguradoraGetById_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Colonia.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>

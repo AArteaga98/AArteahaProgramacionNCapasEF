@@ -447,5 +447,14 @@ namespace DL_EF
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("UsuarioUpdate", idUsuarioParameter, nombreParameter, apellidoPaternoParameter, apellidoMaternoParameter, fechaNacimientoParameter, generoParameter, userNameParameter, emailParameter, passwordParameter, telefonoParameter, celularParameter, cURPParameter, idRolParameter, imagenParameter, calleParameter, numeroInteriorParameter, numeroExteriorParameter, idColoniaParameter);
         }
+    
+        public virtual ObjectResult<AseguradoraGetById_Result> AseguradoraGetById(Nullable<int> idAseguradora)
+        {
+            var idAseguradoraParameter = idAseguradora.HasValue ?
+                new ObjectParameter("IdAseguradora", idAseguradora) :
+                new ObjectParameter("IdAseguradora", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<AseguradoraGetById_Result>("AseguradoraGetById", idAseguradoraParameter);
+        }
     }
 }
